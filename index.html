@@ -10,15 +10,13 @@
     :root{
       --orange:#f36a1f;
       --green:#2f5d50;
-      --dark:#1e1e1e;
-      --light:#ffffff;
     }
 
     *{
       box-sizing:border-box;
       margin:0;
       padding:0;
-      font-family: "Segoe UI", sans-serif;
+      font-family:"Segoe UI",sans-serif;
     }
 
     body{
@@ -29,10 +27,8 @@
 
     a{text-decoration:none}
 
-    /* HEADER */
     header{
-      background:
-        radial-gradient(circle at top, #ffb347, var(--orange));
+      background:radial-gradient(circle at top, #ffb347, var(--orange));
       text-align:center;
       padding:120px 20px 80px;
       color:white;
@@ -51,6 +47,12 @@
     header p{
       font-size:1.4rem;
       font-style:italic;
+    }
+
+    .phone{
+      margin-top:15px;
+      font-size:1.1rem;
+      font-weight:bold;
     }
 
     section{
@@ -113,6 +115,32 @@
       padding:35px 20px;
       font-size:.9rem;
     }
+
+    /* Bouton appeler flottant mobile */
+    .call-button{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#f36a1f;
+      color:white;
+      padding:16px 22px;
+      border-radius:50px;
+      font-size:1.1rem;
+      font-weight:bold;
+      box-shadow:0 10px 25px rgba(0,0,0,.25);
+      z-index:9999;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+
+    .call-button:hover{
+      background:#ff8a3d;
+    }
+
+    @media(min-width:768px){
+      .call-button{display:none}
+    }
   </style>
 </head>
 
@@ -122,6 +150,10 @@
   <img src="logo-affiche.png" alt="Logo M'Bricole & Ré’Création">
   <h1>M'Bricole & Ré’Création</h1>
   <p>Crée à ta façon, vie ta création.</p>
+
+  <div class="phone">
+    📞 <a href="tel:0768149464" style="color:white;">07 68 14 94 64</a>
+  </div>
 </header>
 
 <section>
@@ -162,7 +194,7 @@
         👥 5 places max<br>
         💰 25 €
       </p>
-      <a href="https://calendly.com/TONLIEN-ENFANTS" target="_blank" style="color:#f36a1f;font-weight:bold">
+      <a href="https://calendly.com/TONLIEN-ENFANTS" target="_blank" style="color:#f36a1f;font-weight:bold;">
         Réserver un atelier enfant
       </a>
     </div>
@@ -175,7 +207,7 @@
         👥 5 places max<br>
         💰 25 €
       </p>
-      <a href="https://calendly.com/TONLIEN-ADULTES" target="_blank" style="color:#f36a1f;font-weight:bold">
+      <a href="https://calendly.com/TONLIEN-ADULTES" target="_blank" style="color:#f36a1f;font-weight:bold;">
         Réserver un atelier adulte
       </a>
     </div>
@@ -191,8 +223,15 @@
 
 <footer>
   © 2025 – M'Bricole & Ré’Création · Laval<br>
+  📍 28 quai Jehan Fouquet – 53000 Laval<br>
+  📞 <a href="tel:0768149464" style="color:#f36a1f;font-weight:bold;">07 68 14 94 64</a><br>
   Crée à ta façon, vie ta création.
 </footer>
+
+<!-- Bouton Appeler flottant mobile -->
+<a href="tel:0768149464" class="call-button">
+  📞 Appeler
+</a>
 
 </body>
 </html>
