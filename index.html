@@ -164,7 +164,26 @@
     }
 
     
-  </style>
+  /* Bouton appeler mobile */
+.call-button{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:var(--orange);
+  color:white;
+  padding:16px 22px;
+  border-radius:50px;
+  font-size:1.2rem;
+  font-weight:800;
+  box-shadow:0 10px 25px rgba(0,0,0,.35);
+  z-index:9999;
+}
+
+@media(min-width:768px){
+  .call-button{display:none}
+}
+
+</style>
 </head>
 
 <body>
@@ -235,6 +254,8 @@
   📍 28 quai Jehan Fouquet – 53000 Laval<br>
   📞 <a href="tel:0768149464" style="color:#f36a1f;font-weight:bold">07 68 14 94 64</a>
 </footer>
+
+<a href="tel:0768149464" class="call-button">📞 Appeler</a>
 
 
 
