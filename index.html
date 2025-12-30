@@ -42,14 +42,21 @@
     }
 
     header img{
-      width:300px;
-      max-width:90%;
-      margin-bottom:15px;
-      position:fixed;
-      top:20px;
-      left:50%;
-      transform:translateX(-50%);
-      z-index:10000;
+      width:360px;
+      max-width:100%;
+      margin-bottom:10px;
+      position:relative;
+      z-index:2;
+    }
+
+    .slogan{
+      font-size:1.6rem;
+      font-style:italic;
+      font-weight:600;
+      color:white;
+      text-shadow:0 4px 12px rgba(0,0,0,.6);
+      margin-bottom:25px;
+      letter-spacing:.5px;
     }
 
     .phone{
@@ -107,18 +114,44 @@
       background:rgba(243,106,31,.95);
       color:white;
       text-align:center;
-      padding:80px 20px;
+      padding:100px 20px;
       border-radius:20px;
+      box-shadow:0 20px 50px rgba(0,0,0,.35);
     }
 
     .cta a{
       display:inline-block;
-      margin:15px;
-      padding:16px 36px;
+      margin:20px;
+      padding:22px 52px;
       background:white;
       color:var(--orange);
-      font-weight:bold;
-      border-radius:40px;
+      font-weight:900;
+      font-size:1.35rem;
+      border-radius:60px;
+      box-shadow:0 12px 30px rgba(0,0,0,.35);
+      animation:pulseReserve 2.8s infinite ease-in-out;
+    }
+
+.reserve-box{
+      background:rgba(255,255,255,.12);
+      border:3px dashed rgba(255,255,255,.8);
+      padding:60px 30px;
+      border-radius:30px;
+      max-width:700px;
+      margin:0 auto;
+      box-shadow:0 20px 50px rgba(0,0,0,.35);
+    }
+
+@keyframes pulseReserve{
+      0%{transform:scale(1)}
+      50%{transform:scale(1.06)}
+      100%{transform:scale(1)}
+    }
+
+    @keyframes pulseReserve{
+      0%{transform:scale(1)}
+      50%{transform:scale(1.06)}
+      100%{transform:scale(1)}
     }
 
     footer{
@@ -130,27 +163,7 @@
       margin-top:60px;
     }
 
-    /* BOUTON APPELER FLOTTANT (MOBILE) */
-    .call-button{
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:var(--orange);
-      color:white;
-      padding:16px 22px;
-      border-radius:50px;
-      font-size:1.1rem;
-      font-weight:bold;
-      box-shadow:0 10px 25px rgba(0,0,0,.35);
-      z-index:9999;
-      display:flex;
-      align-items:center;
-      gap:8px;
-    }
-
-    .call-button:hover{background:#ff8a3d}
-
-    @media(min-width:768px){.call-button{display:none}}
+    
   </style>
 </head>
 
@@ -159,6 +172,7 @@
 <header>
   
   <img src="logo-affiche.png" alt="Logo M'Bricole & Ré’Création">
+  <div class="slogan">Crée à ta façon, vie ta création</div>
   
   <div class="phone">📞 <a href="tel:0768149464" style="color:white">07 68 14 94 64</a></div>
 </header>
@@ -179,11 +193,17 @@
       <p>Enfants, adultes et familles. Aucun niveau requis, juste l’envie de créer.</p>
     </div>
   </div>
+  </div>
 </section>
 
 <section class="highlight">
   <h2>📍 Où nous trouver ?</h2>
   <p><strong>28 quai Jehan Fouquet</strong><br>53000 Laval</p>
+  <p style="margin-top:15px">
+    <a href="https://www.google.com/maps/search/?api=1&query=28+quai+Jehan+Fouquet+53000+Laval" target="_blank" style="color:white;font-weight:bold;text-decoration:underline;">
+      📍 Voir sur Google Maps
+    </a>
+  </p>
 </section>
 
 <section>
@@ -203,6 +223,7 @@
 </section>
 
 <section class="cta">
+  <div class="reserve-box">
   <h2>🎈 Prêt à venir créer ?</h2>
   <p>Réservez votre atelier en ligne</p>
   <a href="https://calendly.com/TONLIEN-ENFANTS" target="_blank">Atelier enfant</a>
@@ -215,7 +236,7 @@
   📞 <a href="tel:0768149464" style="color:#f36a1f;font-weight:bold">07 68 14 94 64</a>
 </footer>
 
-<a href="tel:0768149464" class="call-button">📞 Appeler</a>
+
 
 </body>
 </html>
