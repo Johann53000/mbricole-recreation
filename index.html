@@ -10,6 +10,7 @@
     :root{
       --orange:#f36a1f;
       --green:#2f5d50;
+      --dark:#1e1e1e;
     }
 
     *{
@@ -20,17 +21,20 @@
     }
 
     body{
-      background:#fafafa;
+      background:#f5f5f5;
       color:#222;
       line-height:1.6;
     }
 
     a{text-decoration:none}
 
+    /* HEADER AVEC FOND DE L’AFFICHE */
     header{
-      background:radial-gradient(circle at top, #ffb347, var(--orange));
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url("fond-affiche.jpg") center / cover no-repeat;
       text-align:center;
-      padding:120px 20px 80px;
+      padding:140px 20px 100px;
       color:white;
     }
 
@@ -228,10 +232,7 @@
   Crée à ta façon, vie ta création.
 </footer>
 
-<!-- Bouton Appeler flottant mobile -->
-<a href="tel:0768149464" class="call-button">
-  📞 Appeler
-</a>
+<a href="tel:0768149464" class="call-button">📞 Appeler</a>
 
 </body>
 </html>
