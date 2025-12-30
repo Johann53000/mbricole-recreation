@@ -1,63 +1,90 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>M'Bricole & Ré’Création – Laval</title>
-  <meta name="description" content="Boutique-atelier DIY à Laval. Ateliers enfants et adultes. Réservation en ligne.">
+  <meta name="description" content="Boutique-atelier DIY à Laval. Ateliers enfants et adultes. Réservation en ligne." />
 
   <style>
     :root{
       --orange:#f36a1f;
       --green:#2f5d50;
-      --dark:#1e1e1e;
     }
 
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-      font-family:"Segoe UI",sans-serif;
-    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',sans-serif}
 
- body{
-  background:
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-    url("fond-affiche.jpg") center / cover no-repeat fixed;
-  color:#222;
-  line-height:1.6;
-}
+    /* FOND GLOBAL = FOND DE L’AFFICHE */
+    body{
+      background:
+        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+        url('fond-affiche.jpg') center / cover no-repeat fixed;
+      color:#222;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
 
     a{text-decoration:none}
 
-    /* HEADER AVEC FOND DE L’AFFICHE */
-<header>
-  <img src="logo-affiche.png">
-
-  <div class="phone">
-    📞 <a href="tel:0768149464" style="color:white;">07 68 14 94 64</a>
-  </div>
-</header>
+    /* HEADER (LOGO SEUL) */
+    header{
+      position:relative;
+      text-align:center;
+      padding:140px 20px 100px;
+      color:white;
+    }
 
     header img{
-      width:180px;
-      margin-bottom:20px;
-    }
-
-    header h1{
-      font-size:3rem;
-      margin-bottom:10px;
-    }
-
-    header p{
-      font-size:1.4rem;
-      font-style:italic;
+      width:240px;
+      margin-bottom:15px;
+      z-index:2;
+      position:relative;
     }
 
     .phone{
-      margin-top:15px;
       font-size:1.1rem;
       font-weight:bold;
+      z-index:2;
+      position:relative;
+    }
+
+    /* EFFET CRAIE ANIMÉ */
+    .chalk-layer{
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      overflow:hidden;
+    }
+
+    .chalk-layer::before,
+    .chalk-layer::after{
+      content:"";
+      position:absolute;
+      top:100%;
+      left:50%;
+      width:6px;
+      height:6px;
+      background:rgba(255,255,255,.8);
+      border-radius:50%;
+      animation:chalkFloat 10s linear infinite;
+      box-shadow:
+        -120px -40px rgba(255,255,255,.6),
+        -60px -140px rgba(255,255,255,.5),
+        40px -90px rgba(255,255,255,.6),
+        120px -180px rgba(255,255,255,.4),
+        200px -60px rgba(255,255,255,.5);
+    }
+
+    .chalk-layer::after{
+      animation-duration:14s;
+      opacity:.7;
+    }
+
+    @keyframes chalkFloat{
+      0%{transform:translate(-50%,0);opacity:0}
+      20%{opacity:1}
+      80%{opacity:1}
+      100%{transform:translate(-50%,-400px);opacity:0}
     }
 
     section{
@@ -69,6 +96,7 @@
     h2{
       text-align:center;
       margin-bottom:40px;
+      color:#111;
     }
 
     .grid{
@@ -77,31 +105,30 @@
       gap:30px;
     }
 
-   .card{
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(2px);
-  border-radius:18px;
-  padding:30px;
-}
-
-
-    .card h3{
-      color:var(--orange);
-      margin-bottom:15px;
+    .card{
+      background:rgba(255,255,255,.95);
+      backdrop-filter:blur(2px);
+      border-radius:18px;
+      padding:30px;
+      box-shadow:0 10px 30px rgba(0,0,0,.15);
     }
 
+    .card h3{color:var(--orange);margin-bottom:15px}
+
     .highlight{
-      background:var(--green);
+      background:rgba(47,93,80,.95);
       color:white;
       text-align:center;
       padding:80px 20px;
+      border-radius:20px;
     }
 
     .cta{
-      background:var(--orange);
+      background:rgba(243,106,31,.95);
       color:white;
       text-align:center;
       padding:80px 20px;
+      border-radius:20px;
     }
 
     .cta a{
@@ -115,67 +142,57 @@
     }
 
     footer{
-      background:#111;
+      background:rgba(0,0,0,.9);
       color:#ccc;
       text-align:center;
       padding:35px 20px;
       font-size:.9rem;
+      margin-top:60px;
     }
 
-    /* Bouton appeler flottant mobile */
+    /* BOUTON APPELER FLOTTANT (MOBILE) */
     .call-button{
       position:fixed;
       bottom:20px;
       right:20px;
-      background:#f36a1f;
+      background:var(--orange);
       color:white;
       padding:16px 22px;
       border-radius:50px;
       font-size:1.1rem;
       font-weight:bold;
-      box-shadow:0 10px 25px rgba(0,0,0,.25);
+      box-shadow:0 10px 25px rgba(0,0,0,.35);
       z-index:9999;
       display:flex;
       align-items:center;
       gap:8px;
     }
 
-    .call-button:hover{
-      background:#ff8a3d;
-    }
+    .call-button:hover{background:#ff8a3d}
 
-    @media(min-width:768px){
-      .call-button{display:none}
-    }
+    @media(min-width:768px){.call-button{display:none}}
   </style>
 </head>
 
 <body>
 
 <header>
+  <div class="chalk-layer"></div>
   <img src="logo-affiche.png" alt="Logo M'Bricole & Ré’Création">
-  <h1>M'Bricole & Ré’Création</h1>
-  <p>Crée à ta façon, vie ta création.</p>
-
-  <div class="phone">
-    📞 <a href="tel:0768149464" style="color:white;">07 68 14 94 64</a>
-  </div>
+  <div class="phone">📞 <a href="tel:0768149464" style="color:white">07 68 14 94 64</a></div>
 </header>
 
 <section>
   <h2>🎉 Ouverture le 2 février à Laval</h2>
-
   <div class="grid">
     <div class="card">
       <h3>🛠️ Un lieu unique</h3>
       <p>Boutique-atelier dédiée au bricolage et à la création. On fabrique, on apprend et on s’amuse ensemble.</p>
     </div>
-
     <div class="card">
       <h3>🎨 Ateliers DIY</h3>
       <p>Bois, création, récupération, objets personnalisés. Ateliers encadrés et accessibles à tous.</p>
     </div>
-
     <div class="card">
       <h3>👨‍👩‍👧‍👦 Pour tous</h3>
       <p>Enfants, adultes et familles. Aucun niveau requis, juste l’envie de créer.</p>
@@ -190,38 +207,22 @@
 
 <section>
   <h2>📅 Réserver un atelier</h2>
-
   <div class="grid">
     <div class="card">
       <h3>👧 Atelier Enfants</h3>
-      <p>
-        📆 Mercredi<br>
-        🕒 14h – 18h<br>
-        👥 5 places max<br>
-        💰 25 €
-      </p>
-      <a href="https://calendly.com/TONLIEN-ENFANTS" target="_blank" style="color:#f36a1f;font-weight:bold;">
-        Réserver un atelier enfant
-      </a>
+      <p>📆 Mercredi<br>🕒 14h – 18h<br>👥 5 places max<br>💰 25 €</p>
+      <a href="https://calendly.com/TONLIEN-ENFANTS" target="_blank" style="color:var(--orange);font-weight:bold">Réserver un atelier enfant</a>
     </div>
-
     <div class="card">
       <h3>🧑 Atelier Adultes</h3>
-      <p>
-        📆 Lundi, Mardi, Jeudi, Vendredi<br>
-        🕒 14h – 18h<br>
-        👥 5 places max<br>
-        💰 25 €
-      </p>
-      <a href="https://calendly.com/TONLIEN-ADULTES" target="_blank" style="color:#f36a1f;font-weight:bold;">
-        Réserver un atelier adulte
-      </a>
+      <p>📆 Lundi, Mardi, Jeudi, Vendredi<br>🕒 14h – 18h<br>👥 5 places max<br>💰 25 €</p>
+      <a href="https://calendly.com/TONLIEN-ADULTES" target="_blank" style="color:var(--orange);font-weight:bold">Réserver un atelier adulte</a>
     </div>
   </div>
 </section>
 
 <section class="cta">
-  <h2>🎈 Prêt à créer ?</h2>
+  <h2>🎈 Prêt à venir créer ?</h2>
   <p>Réservez votre atelier en ligne</p>
   <a href="https://calendly.com/TONLIEN-ENFANTS" target="_blank">Atelier enfant</a>
   <a href="https://calendly.com/TONLIEN-ADULTES" target="_blank">Atelier adulte</a>
@@ -230,8 +231,7 @@
 <footer>
   © 2025 – M'Bricole & Ré’Création · Laval<br>
   📍 28 quai Jehan Fouquet – 53000 Laval<br>
-  📞 <a href="tel:0768149464" style="color:#f36a1f;font-weight:bold;">07 68 14 94 64</a><br>
-  Crée à ta façon, vie ta création.
+  📞 <a href="tel:0768149464" style="color:#f36a1f;font-weight:bold">07 68 14 94 64</a>
 </footer>
 
 <a href="tel:0768149464" class="call-button">📞 Appeler</a>
