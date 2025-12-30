@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M'Bricole & Ré’Création – Laval</title>
-  <meta name="description" content="Boutique-atelier DIY à Laval. Ateliers enfants et adultes. Réservation en ligne." />
+  <meta name="description" content="Boutique-atelier DIY à Laval. Ateliers enfants et adultes. Réservation en ligne.">
+
   <style>
     :root{
       --orange:#f36a1f;
@@ -12,44 +13,94 @@
       --dark:#1e1e1e;
       --light:#ffffff;
     }
-    *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',sans-serif}
-    body{background:#fafafa;color:#222;line-height:1.6}
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body{
+      background:#fafafa;
+      color:#222;
+      line-height:1.6;
+    }
+
     a{text-decoration:none}
 
+    /* HEADER */
     header{
-      background:radial-gradient(circle at top, #ffb347, var(--orange));
-      color:#fff;
-      padding:90px 20px;
+      background:
+        radial-gradient(circle at top, #ffb347, var(--orange));
       text-align:center;
+      padding:120px 20px 80px;
+      color:white;
     }
-    header h1{font-size:3rem;margin-bottom:10px}
-    header p{font-size:1.4rem;font-style:italic}
 
-    section{padding:70px 20px;max-width:1100px;margin:auto}
-    h2{text-align:center;margin-bottom:30px}
+    header img{
+      width:180px;
+      margin-bottom:20px;
+    }
 
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
-    .card{background:#fff;border-radius:18px;padding:30px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
-    .card h3{color:var(--orange);margin-bottom:10px}
+    header h1{
+      font-size:3rem;
+      margin-bottom:10px;
+    }
+
+    header p{
+      font-size:1.4rem;
+      font-style:italic;
+    }
+
+    section{
+      padding:70px 20px;
+      max-width:1100px;
+      margin:auto;
+    }
+
+    h2{
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:18px;
+      padding:30px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+    }
+
+    .card h3{
+      color:var(--orange);
+      margin-bottom:15px;
+    }
 
     .highlight{
       background:var(--green);
-      color:#fff;
+      color:white;
       text-align:center;
-      padding:70px 20px;
+      padding:80px 20px;
     }
 
     .cta{
       background:var(--orange);
-      color:#fff;
+      color:white;
       text-align:center;
       padding:80px 20px;
     }
+
     .cta a{
       display:inline-block;
       margin:15px;
       padding:16px 36px;
-      background:#fff;
+      background:white;
       color:var(--orange);
       font-weight:bold;
       border-radius:40px;
@@ -64,48 +115,69 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
+  <img src="logo-affiche.png" alt="Logo M'Bricole & Ré’Création">
   <h1>M'Bricole & Ré’Création</h1>
   <p>Crée à ta façon, vie ta création.</p>
 </header>
 
 <section>
   <h2>🎉 Ouverture le 2 février à Laval</h2>
+
   <div class="grid">
     <div class="card">
       <h3>🛠️ Un lieu unique</h3>
       <p>Boutique-atelier dédiée au bricolage et à la création. On fabrique, on apprend et on s’amuse ensemble.</p>
     </div>
+
     <div class="card">
       <h3>🎨 Ateliers DIY</h3>
       <p>Bois, création, récupération, objets personnalisés. Ateliers encadrés et accessibles à tous.</p>
     </div>
+
     <div class="card">
       <h3>👨‍👩‍👧‍👦 Pour tous</h3>
-      <p>Enfants, adultes, familles. Aucun niveau requis, juste l’envie de créer.</p>
+      <p>Enfants, adultes et familles. Aucun niveau requis, juste l’envie de créer.</p>
     </div>
   </div>
 </section>
 
 <section class="highlight">
   <h2>📍 Où nous trouver ?</h2>
-  <p><strong>28 quai Jehan Fouquet</strong><br/>53000 Laval</p>
+  <p><strong>28 quai Jehan Fouquet</strong><br>53000 Laval</p>
 </section>
 
 <section>
   <h2>📅 Réserver un atelier</h2>
+
   <div class="grid">
     <div class="card">
       <h3>👧 Atelier Enfants</h3>
-      <p>📆 Mercredi<br/>🕒 14h – 18h<br/>👥 5 places max<br/>💰 25 €</p>
-      <a href="https://calendly.com/TONLIEN-ENFANTS" target="_blank" style="color:var(--orange);font-weight:bold">Réserver un atelier enfant</a>
+      <p>
+        📆 Mercredi<br>
+        🕒 14h – 18h<br>
+        👥 5 places max<br>
+        💰 25 €
+      </p>
+      <a href="https://calendly.com/TONLIEN-ENFANTS" target="_blank" style="color:#f36a1f;font-weight:bold">
+        Réserver un atelier enfant
+      </a>
     </div>
+
     <div class="card">
       <h3>🧑 Atelier Adultes</h3>
-      <p>📆 Lundi, Mardi, Jeudi, Vendredi<br/>🕒 14h – 18h<br/>👥 5 places max<br/>💰 25 €</p>
-      <a href="https://calendly.com/TONLIEN-ADULTES" target="_blank" style="color:var(--orange);font-weight:bold">Réserver un atelier adulte</a>
+      <p>
+        📆 Lundi, Mardi, Jeudi, Vendredi<br>
+        🕒 14h – 18h<br>
+        👥 5 places max<br>
+        💰 25 €
+      </p>
+      <a href="https://calendly.com/TONLIEN-ADULTES" target="_blank" style="color:#f36a1f;font-weight:bold">
+        Réserver un atelier adulte
+      </a>
     </div>
   </div>
 </section>
@@ -118,7 +190,7 @@
 </section>
 
 <footer>
-  © 2025 – M'Bricole & Ré’Création · Laval<br/>
+  © 2025 – M'Bricole & Ré’Création · Laval<br>
   Crée à ta façon, vie ta création.
 </footer>
 
