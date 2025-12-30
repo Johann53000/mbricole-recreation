@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>M'Bricole & Ré’Création – Laval</title>
   <meta name="description" content="Boutique-atelier DIY à Laval. Ateliers enfants et adultes. Réservation en ligne." />
 
@@ -42,21 +42,14 @@
     }
 
     header img{
-      width:360px;
-      max-width:100%;
-      margin-bottom:10px;
-      position:relative;
-      z-index:2;
-    }
-
-    .slogan{
-      font-size:1.6rem;
-      font-style:italic;
-      font-weight:600;
-      color:white;
-      text-shadow:0 4px 12px rgba(0,0,0,.6);
-      margin-bottom:25px;
-      letter-spacing:.5px;
+      width:300px;
+      max-width:90%;
+      margin-bottom:15px;
+      position:fixed;
+      top:20px;
+      left:50%;
+      transform:translateX(-50%);
+      z-index:10000;
     }
 
     .phone{
@@ -64,10 +57,101 @@
     }
 
     @media(min-width:768px){
-  .call-button{display:none}
-}
+      .phone{display:none}
+    }
+    }
 
-</style>
+    
+      20%{opacity:1}
+      80%{opacity:1}
+      100%{transform:translate(-50%,-400px);opacity:0}
+    }
+
+    section{
+      padding:70px 20px;
+      max-width:1100px;
+      margin:auto;
+    }
+
+    h2{
+      text-align:center;
+      margin-bottom:40px;
+      color:#111;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:rgba(255,255,255,.95);
+      backdrop-filter:blur(2px);
+      border-radius:18px;
+      padding:30px;
+      box-shadow:0 10px 30px rgba(0,0,0,.15);
+    }
+
+    .card h3{color:var(--orange);margin-bottom:15px}
+
+    .highlight{
+      background:rgba(47,93,80,.95);
+      color:white;
+      text-align:center;
+      padding:80px 20px;
+      border-radius:20px;
+    }
+
+    .cta{
+      background:rgba(243,106,31,.95);
+      color:white;
+      text-align:center;
+      padding:80px 20px;
+      border-radius:20px;
+    }
+
+    .cta a{
+      display:inline-block;
+      margin:15px;
+      padding:16px 36px;
+      background:white;
+      color:var(--orange);
+      font-weight:bold;
+      border-radius:40px;
+    }
+
+    footer{
+      background:rgba(0,0,0,.9);
+      color:#ccc;
+      text-align:center;
+      padding:35px 20px;
+      font-size:.9rem;
+      margin-top:60px;
+    }
+
+    /* BOUTON APPELER FLOTTANT (MOBILE) */
+    .call-button{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:var(--orange);
+      color:white;
+      padding:16px 22px;
+      border-radius:50px;
+      font-size:1.1rem;
+      font-weight:bold;
+      box-shadow:0 10px 25px rgba(0,0,0,.35);
+      z-index:9999;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+
+    .call-button:hover{background:#ff8a3d}
+
+    @media(min-width:768px){.call-button{display:none}}
+  </style>
 </head>
 
 <body>
@@ -75,7 +159,6 @@
 <header>
   
   <img src="logo-affiche.png" alt="Logo M'Bricole & Ré’Création">
-  <div class="slogan">Crée à ta façon, vie ta création</div>
   
   <div class="phone">📞 <a href="tel:0768149464" style="color:white">07 68 14 94 64</a></div>
 </header>
@@ -96,17 +179,11 @@
       <p>Enfants, adultes et familles. Aucun niveau requis, juste l’envie de créer.</p>
     </div>
   </div>
-  </div>
 </section>
 
 <section class="highlight">
   <h2>📍 Où nous trouver ?</h2>
   <p><strong>28 quai Jehan Fouquet</strong><br>53000 Laval</p>
-  <p style="margin-top:15px">
-    <a href="https://www.google.com/maps/search/?api=1&query=28+quai+Jehan+Fouquet+53000+Laval" target="_blank" style="color:white;font-weight:bold;text-decoration:underline;">
-      📍 Voir sur Google Maps
-    </a>
-  </p>
 </section>
 
 <section>
@@ -126,7 +203,6 @@
 </section>
 
 <section class="cta">
-  <div class="reserve-box">
   <h2>🎈 Prêt à venir créer ?</h2>
   <p>Réservez votre atelier en ligne</p>
   <a href="https://calendly.com/TONLIEN-ENFANTS" target="_blank">Atelier enfant</a>
@@ -140,8 +216,6 @@
 </footer>
 
 <a href="tel:0768149464" class="call-button">📞 Appeler</a>
-
-
 
 </body>
 </html>
