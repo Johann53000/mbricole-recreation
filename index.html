@@ -107,18 +107,28 @@
       background:rgba(243,106,31,.95);
       color:white;
       text-align:center;
-      padding:80px 20px;
+      padding:100px 20px;
       border-radius:20px;
+      box-shadow:0 20px 50px rgba(0,0,0,.35);
     }
 
     .cta a{
       display:inline-block;
-      margin:15px;
-      padding:16px 36px;
+      margin:20px;
+      padding:20px 48px;
       background:white;
       color:var(--orange);
-      font-weight:bold;
-      border-radius:40px;
+      font-weight:900;
+      font-size:1.3rem;
+      border-radius:60px;
+      box-shadow:0 12px 30px rgba(0,0,0,.35);
+      animation:pulseReserve 2.8s infinite ease-in-out;
+    }
+
+    @keyframes pulseReserve{
+      0%{transform:scale(1)}
+      50%{transform:scale(1.06)}
+      100%{transform:scale(1)}
     }
 
     footer{
