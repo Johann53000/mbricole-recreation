@@ -28,6 +28,13 @@
 
     /* HEADER (LOGO SEUL) */
     header{
+      min-height:420px;
+      padding-top:360px;
+      text-align:center;
+      color:white;
+      position:relative;
+    
+    
       position:relative;
       text-align:center;
       padding:140px 20px 100px;
@@ -35,10 +42,14 @@
     }
 
     header img{
-      width:240px;
+      width:300px;
+      max-width:90%;
       margin-bottom:15px;
-      z-index:2;
-      position:relative;
+      position:fixed;
+      top:20px;
+      left:50%;
+      transform:translateX(-50%);
+      z-index:10000;
     }
 
     .phone{
@@ -63,40 +74,7 @@
       .phone{display:none}
     }
 
-    /* EFFET CRAIE ANIMÉ */
-    .chalk-layer{
-      position:absolute;
-      inset:0;
-      pointer-events:none;
-      overflow:hidden;
-    }
-
-    .chalk-layer::before,
-    .chalk-layer::after{
-      content:"";
-      position:absolute;
-      top:100%;
-      left:50%;
-      width:6px;
-      height:6px;
-      background:rgba(255,255,255,.8);
-      border-radius:50%;
-      animation:chalkFloat 10s linear infinite;
-      box-shadow:
-        -120px -40px rgba(255,255,255,.6),
-        -60px -140px rgba(255,255,255,.5),
-        40px -90px rgba(255,255,255,.6),
-        120px -180px rgba(255,255,255,.4),
-        200px -60px rgba(255,255,255,.5);
-    }
-
-    .chalk-layer::after{
-      animation-duration:14s;
-      opacity:.7;
-    }
-
-    @keyframes chalkFloat{
-      0%{transform:translate(-50%,0);opacity:0}
+    
       20%{opacity:1}
       80%{opacity:1}
       100%{transform:translate(-50%,-400px);opacity:0}
@@ -192,7 +170,7 @@
 <body>
 
 <header>
-  <div class="chalk-layer"></div>
+  
   <img src="logo-affiche.png" alt="Logo M'Bricole & Ré’Création">
   <div style="margin-top:10px;font-size:1.2rem;font-weight:bold;letter-spacing:1px">Appelez-nous</div>
   <div class="phone">📞 <a href="tel:0768149464" style="color:white">07 68 14 94 64</a></div>
