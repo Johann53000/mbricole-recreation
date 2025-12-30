@@ -20,23 +20,24 @@
       font-family:"Segoe UI",sans-serif;
     }
 
-    body{
-      background:#f5f5f5;
-      color:#222;
-      line-height:1.6;
-    }
+ body{
+  background:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("fond-affiche.jpg") center / cover no-repeat fixed;
+  color:#222;
+  line-height:1.6;
+}
 
     a{text-decoration:none}
 
     /* HEADER AVEC FOND DE L’AFFICHE */
-    header{
-      background:
-        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-        url("fond-affiche.jpg") center / cover no-repeat;
-      text-align:center;
-      padding:140px 20px 100px;
-      color:white;
-    }
+   header{
+  background: transparent;
+  text-align:center;
+  padding:140px 20px 100px;
+  color:white;
+}
+
 
     header img{
       width:180px;
@@ -76,12 +77,13 @@
       gap:30px;
     }
 
-    .card{
-      background:white;
-      border-radius:18px;
-      padding:30px;
-      box-shadow:0 10px 30px rgba(0,0,0,.08);
-    }
+   .card{
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(2px);
+  border-radius:18px;
+  padding:30px;
+}
+
 
     .card h3{
       color:var(--orange);
